@@ -20,4 +20,10 @@ public class HelperBase {
 
         }
     }
+
+    public void click(By locator) {
+        wd.findElement(locator).click();
+    }
+
+
 }

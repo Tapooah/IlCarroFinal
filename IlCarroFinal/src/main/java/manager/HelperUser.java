@@ -2,6 +2,9 @@ package manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class HelperUser extends HelperBase {
     public HelperUser(WebDriver wd) {
@@ -27,7 +30,15 @@ public class HelperUser extends HelperBase {
         wd.findElement(By.cssSelector("button[type='submit']")).click();
 //        wd.findElement(By.xpath("//button[text()='Y’alla!']")).click();
 
+    }
 
+    public boolean isLogged() {
+        List<WebElement> list = wd.findElements(By.cssSelector("a[href ^='/logout']"));
+        return !list.isEmpty(); //list.size()>0;
+    }
+
+    public void logout() {
+        click(By.cssSelector("a[href ^='/logout']"));
     }
 
     ////////////////////////////////////// ˄ service methods ˄ //////////////////////////////////////
