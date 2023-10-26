@@ -24,35 +24,5 @@ public class TestBase {
         app.stop();
     }
 
-    ////////////////////////////////////// ˅ service methods ˅ //////////////////////////////////////
 
-    public void openLoginForm() {
-//        wd.findElement(By.xpath("//a[text()=' Log in ']")).click();
-        wd.findElement(By.cssSelector("a[href ^='login']")).click();
-    }
-
-    public void fillLoginForm(String email, String password) {
-        type(By.id("email"), email);
-        type(By.id("password"), password);
-
-    }
-
-    public void type(By locator, String text) {
-        if (text != null) {
-            WebElement elem = wd.findElement(locator);
-            elem.click();
-            elem.clear();
-            elem.sendKeys(text);
-
-        }
-    }
-
-    public void submitLogin() {
-        wd.findElement(By.cssSelector("button[type='submit']")).click();
-//        wd.findElement(By.xpath("//button[text()='Y’alla!']")).click();
-
-
-    }
-
-    ////////////////////////////////////// ˄ service methods ˄ //////////////////////////////////////
 }
