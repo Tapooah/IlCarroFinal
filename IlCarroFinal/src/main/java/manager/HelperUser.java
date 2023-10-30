@@ -30,12 +30,12 @@ public class HelperUser extends HelperBase {
 
 
     public boolean isLogged() {
-        List<WebElement> list = wd.findElements(By.cssSelector("a[href ^='/logout']"));
+        List<WebElement> list = wd.findElements(By.cssSelector("a[href ^='/ Logout ']"));
         return !list.isEmpty(); //list.size()>0;
     }
 
     public void logout() {
-        click(By.cssSelector("a[href ^='/logout']"));
+        click(By.cssSelector("a[href ^='/ Logout ']"));
     }
 
     public void openRegistrationForm() {
