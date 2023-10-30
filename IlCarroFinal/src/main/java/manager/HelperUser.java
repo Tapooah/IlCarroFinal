@@ -1,5 +1,6 @@
 package manager;
 
+import madels.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,12 +27,6 @@ public class HelperUser extends HelperBase {
     }
 
 
-    public void submitLogin() {
-        wd.findElement(By.cssSelector("button[type='submit']")).click();
-//        wd.findElement(By.xpath("//button[text()='Y’alla!']")).click();
-
-    }
-
     public boolean isLogged() {
         List<WebElement> list = wd.findElements(By.cssSelector("a[href ^='/logout']"));
         return !list.isEmpty(); //list.size()>0;
@@ -39,6 +34,21 @@ public class HelperUser extends HelperBase {
 
     public void logout() {
         click(By.cssSelector("a[href ^='/logout']"));
+    }
+
+    public void openRegistrationForm() {
+        click(By.xpath("//a[text()=' Sign up ']"));
+    }
+
+    public void fillRegistrationForm(User user) {
+        type(By.id("name"), user.getName());
+        type(By.id("lastName"), user.getLastName());
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
+    }
+
+    public void checkPolicy() {
+
     }
 
     ////////////////////////////////////// ˄ service methods ˄ //////////////////////////////////////

@@ -15,7 +15,7 @@ public class LoginTests extends TestBase {
     public void loginSuccess() {
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("noa@gmail.com", "Nnoa12345$");
-        app.getHelperUser().submitLogin();
+        app.getHelperUser().submit();
     }
 
 

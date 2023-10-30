@@ -25,5 +25,9 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
+    public void submit() {
+        wd.findElement(By.cssSelector("button[type='submit']")).click();
+//        wd.findElement(By.xpath("//button[text()='Y’alla!']")).click();
 
+    }
 }
