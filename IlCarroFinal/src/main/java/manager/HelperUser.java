@@ -94,7 +94,7 @@ public class HelperUser extends HelperBase {
     }
 
     public boolean isErrorPasswordFormatDisplayed() {
-        
+
         boolean lastChild = new WebDriverWait(wd, Duration.ofSeconds(5))
                 .until(ExpectedConditions
                         .textToBePresentInElement(wd.findElement(By.cssSelector("div.error div:last-child")),
