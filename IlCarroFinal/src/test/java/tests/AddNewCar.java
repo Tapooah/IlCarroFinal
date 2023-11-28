@@ -32,9 +32,10 @@ public class AddNewCar extends TestBase {
                 .features("type features")
                 .about("some text for about")
                 .build();
-    app.car().openCarForm();
-    app.car().fillCarForm(car);
-    app.car().attachPhoto("");
-    app.car().submit();
+
+        app.car().openCarForm();
+        app.car().fillCarForm(car);
+        app.car().attachPhoto("");
+        app.car().submit();
     }
 }
