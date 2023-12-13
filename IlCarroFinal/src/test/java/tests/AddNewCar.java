@@ -1,6 +1,6 @@
 package tests;
 
-import madels.Car;
+import models.Car;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -8,7 +8,9 @@ public class AddNewCar extends TestBase {
     @BeforeMethod
     public void preCondition() {
         //logged?
-
+        if (app.getHelperUser().isLogged()) {
+            app.getHelperUser().logout();
+        }
     }
 
     @Test

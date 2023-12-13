@@ -1,6 +1,6 @@
 package tests;
 
-import madels.User;
+import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
